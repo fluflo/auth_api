@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "Auth Excercise",
-    "dateExported": "2023-12-11T16:26:58.892Z",
+    "dateExported": "2023-12-11T16:36:15.002Z",
     "version": "1.1",
     "folders": [],
     "requests": [
@@ -14,7 +14,7 @@
             "method": "POST",
             "sortNum": 10000,
             "created": "2023-12-11T16:26:43.740Z",
-            "modified": "2023-12-11T16:26:43.740Z",
+            "modified": "2023-12-11T16:36:11.286Z",
             "headers": [],
             "params": [],
             "body": {
@@ -33,13 +33,31 @@
             "method": "POST",
             "sortNum": 20000,
             "created": "2023-12-11T16:26:52.580Z",
-            "modified": "2023-12-11T16:26:52.580Z",
+            "modified": "2023-12-11T16:35:59.478Z",
             "headers": [],
             "params": [],
             "body": {
                 "type": "json",
                 "raw": "{\n  \"username\":\"Joe\",\n  \"password\":\"Test.1234\"\n}",
                 "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "e14867f2-ab05-4743-a671-9191d71672ca",
+            "colId": "88112acf-6113-4c73-b3de-9dadb1f64711",
+            "containerId": "",
+            "name": "Get My User",
+            "url": "http://localhost:3000/me",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2023-12-11T16:35:44.976Z",
+            "modified": "2023-12-11T16:35:44.976Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "YOUR AUTH TOKEN"
             },
             "tests": []
         }

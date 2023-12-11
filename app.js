@@ -7,6 +7,8 @@ const auth_service_1 = require("./service/auth.service");
 const authUser_repository_1 = require("./repository/authUser.repository");
 const auth_controller_1 = require("./controller/auth.controller");
 const data_source_1 = require("./data-source");
+const user_service_1 = require("./service/user.service");
+const user_controller_1 = require("./controller/user.controller");
 dotenv.config();
 data_source_1.default
     .initialize()
@@ -19,10 +21,12 @@ data_source_1.default
 const userRepository = new user_repository_1.UserRepository(data_source_1.default);
 const authRepository = new authUser_repository_1.AuthUserRepository(data_source_1.default);
 const authService = new auth_service_1.AuthService(authRepository, userRepository);
+const userService = new user_service_1.UserService(userRepository);
 // create and setup express app
 const app = express();
 app.use(express.json());
 // register routes
 new auth_controller_1.AuthController(app, authService).registerEndpoints();
+new user_controller_1.UserController(app, userService).registerEndpoints();
 // start express server
 app.listen(3000);
