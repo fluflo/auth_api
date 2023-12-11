@@ -1,0 +1,47 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Auth Excercise",
+    "dateExported": "2023-12-11T16:26:58.892Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "8ee3e57c-2b8a-44ef-b9a2-96ca74374d08",
+            "colId": "88112acf-6113-4c73-b3de-9dadb1f64711",
+            "containerId": "",
+            "name": "Create User",
+            "url": "http://localhost:3000/register",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2023-12-11T16:26:43.740Z",
+            "modified": "2023-12-11T16:26:43.740Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"username\":\"Joe\",\n  \"password\":\"Test.1234\",\n  \"firstName\": \"Joe\",\n  \"lastName\": \"Doe\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "66c6d625-0db8-44c7-89d7-171b2fbd9906",
+            "colId": "88112acf-6113-4c73-b3de-9dadb1f64711",
+            "containerId": "",
+            "name": "Login user",
+            "url": "http://localhost:3000/auth",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2023-12-11T16:26:52.580Z",
+            "modified": "2023-12-11T16:26:52.580Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"username\":\"Joe\",\n  \"password\":\"Test.1234\"\n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}
