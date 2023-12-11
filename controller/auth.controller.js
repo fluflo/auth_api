@@ -16,7 +16,6 @@ class AuthController {
     constructor(app, authService) {
         this.app = app;
         this.authService = authService;
-        console.log("The value of authService is ...", authService);
     }
     registerEndpoints() {
         const app = this.app;

@@ -14,7 +14,6 @@ export class AuthController {
     ){
         this.app = app
         this.authService = authService
-        console.log("The value of authService is ...", authService)
     }
 
     registerEndpoints() {

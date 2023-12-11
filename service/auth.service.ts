@@ -14,7 +14,6 @@ export class AuthService {
     ){
         this.authRepository = authRepository
         this.userRepository = userRepository
-
     }
     
     async authenticate(username: string, password: string) :Promise<string | null>{

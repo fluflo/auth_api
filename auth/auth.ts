@@ -17,9 +17,11 @@ export function authenicateToken(req :Request, res :Response, next :NextFunction
     if (!token) return res.sendStatus(401)
 
     jwt.verify(token, process.env.TOKEN_SECRET as string, (err:any, user: any) => {
-        console.error(err)
-        if (err) return res.sendStatus(403)
-
+        if (err) {
+            console.error(err)
+            return res.sendStatus(403)
+        } 
+        
         req.userId = user.sub
         next()
     })
