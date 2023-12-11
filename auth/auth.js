@@ -16,9 +16,10 @@ function authenicateToken(req, res, next) {
     if (!token)
         return res.sendStatus(401);
     jwt.verify(token, process.env.TOKEN_SECRET, (err, user) => {
-        console.error(err);
-        if (err)
+        if (err) {
+            console.error(err);
             return res.sendStatus(403);
+        }
         req.userId = user.sub;
         next();
     });

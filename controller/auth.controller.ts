@@ -28,7 +28,9 @@ export class AuthController {
         
             if (!accessToken) return res.sendStatus(403)
             
-            return res.status(200).send(accessToken);
+            return res.status(200).send({
+                token: accessToken
+            });
         })
         
         app.post("/register", async function(req: Request<any, any,CreateUserDto>, res: Response){

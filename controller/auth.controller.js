@@ -28,7 +28,9 @@ class AuthController {
                 const accessToken = yield authService.authenticate(req.body.username, req.body.password);
                 if (!accessToken)
                     return res.sendStatus(403);
-                return res.status(200).send(accessToken);
+                return res.status(200).send({
+                    token: accessToken
+                });
             });
         });
         app.post("/register", function (req, res) {
